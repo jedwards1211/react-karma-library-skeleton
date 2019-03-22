@@ -46,6 +46,7 @@ module.exports = {
     rules: [
       {
         loader: 'babel-loader',
+        exclude: /node_modules/,
         options: {
           cacheDirectory: true,
         },
