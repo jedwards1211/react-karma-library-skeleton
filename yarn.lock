@@ -1652,10 +1652,10 @@ babel-loader@^8.0.5:
     mkdirp "^0.5.1"
     util.promisify "^1.0.0"
 
-babel-plugin-flow-react-proptypes@^25.0.0:
-  version "25.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-25.0.0.tgz#88c922f5c109aa564f8ac52effc084ec21bf2dcc"
-  integrity sha512-3HLRFvd0+cbyeIkGMpzoTVQIpt4ZpVxWGWJ/iMR2+hkJ1Js6uS3fNiGncVsuFiNP+zu/CXEb4sLjnmB3oV38zA==
+babel-plugin-flow-react-proptypes@^26.0.0:
+  version "26.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-flow-react-proptypes/-/babel-plugin-flow-react-proptypes-26.0.0.tgz#5ccd42ce45e28f88d5a0594c9f5685bc79440782"
+  integrity sha512-Cev/n+TqUGjo2221YLe4n9om/0Wd2AjhdVhyAqshHgzn4+HovznCzehxROD+74KBq0i4ard9bdLf7L7lb22FRw==
   dependencies:
     "@babel/template" "^7.2.2"
     "@babel/traverse" "^7.0.0"
