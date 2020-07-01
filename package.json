@@ -95,7 +95,7 @@
     "@jedwards1211/eslint-config-react": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
-    "babel-plugin-flow-react-proptypes": "^25.0.0",
+    "babel-plugin-flow-react-proptypes": "^26.0.0",
     "babel-plugin-istanbul": "^5.1.0",
     "babel-plugin-transform-react-constant-elements": "^6.9.1",
     "babel-preset-react": "^6.16.0",
