@@ -1,6 +1,3 @@
-// flow-typed signature: 195cec6dc98ab7533f0eb927ee493f99
-// flow-typed version: 1a6d5d1968/mocha_v8.x.x/flow_>=v0.104.x
-
 declare interface $npm$mocha$SetupOptions {
   slow?: number;
   timeout?: number;

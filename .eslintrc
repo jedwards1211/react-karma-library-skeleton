@@ -3,12 +3,17 @@
     "@jedwards1211/eslint-config",
     "@jedwards1211/eslint-config-flow",
     "@jedwards1211/eslint-config-react",
-    "prettier",
-    "prettier/babel",
-    "prettier/flowtype"
+    "prettier"
   ],
   "parser": "@babel/eslint-parser",
   "env": {
     "es2017": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "detect"
+    }
   }
 }

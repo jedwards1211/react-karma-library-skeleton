@@ -12,10 +12,10 @@ module.exports = (config) => {
         flags: ['-headless'],
       },
     },
-    frameworks: ['mocha'],
-    files: ['test/index.js'],
+    frameworks: ['mocha', 'webpack'],
+    files: ['test/configure.js', 'test/index.js'],
     preprocessors: {
-      'test/index.js': ['webpack', 'sourcemap'],
+      'test/*.js': ['webpack', 'sourcemap'],
     },
     webpack: Object.assign(webpackConfig, {
       devtool: 'inline-source-map',

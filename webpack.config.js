@@ -8,12 +8,7 @@ const env = process.env.NODE_ENV
 const isTest = env === 'test'
 const isProd = env === 'production'
 
-const plugins = [
-  new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(env),
-  }),
-  new ProgressPlugin({ profile: false }),
-]
+const plugins = [new ProgressPlugin({ profile: false })]
 
 if (isProd) {
   plugins.push(
