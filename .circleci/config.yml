@@ -2,15 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8-browsers
+      - image: circleci/node:14-browsers
     environment:
       CHROME_BIN: /usr/bin/google-chrome
     steps:
       - checkout
-      - restore_cache:
-          name: Restore Yarn Package Cache
-          keys:
-            - v1-yarn-packages-{{ checksum "yarn.lock" }}
 
       - run:
           name: Setup NPM Token
@@ -21,24 +17,19 @@ jobs:
 
       # https://github.com/atlassian/react-beautiful-dnd/issues/1007#issuecomment-446415426
       - run:
-	  name: Workaround for Flow crashing
-	  command: echo "server.max_workers=1" >> .flowconfig
+          name: Workaround for Flow crashing
+          command: echo "server.max_workers=1" >> .flowconfig
 
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
-      - save_cache:
-          name: Save Yarn Package Cache
-          key: v1-yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
 
       - run:
           name: build
           command: yarn run prepublishOnly
       - run:
           name: upload test coverage
-          command: yarn codecov || true
+          command: yarn codecov
       - run:
           name: release
-          command: yarn run semantic-release || true
+          command: yarn run semantic-release
